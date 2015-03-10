@@ -1,0 +1,29 @@
+<div class="pure-menu pure-menu-open pure-menu-horizontal">
+  <ul>
+       
+       <li><%= link_to "Back to the list of wine stores", stores_path %></li>
+       <li><%= link_to "Back to the list of wines", wines_path %></li>
+</ul>
+</div>
+
+
+
+<h1>New Store</h1>
+
+<%= form_for @store do |f| %>
+
+<div class="container">
+	
+	
+	
+	  <div class="form-group">
+	    <%= f.label :Name %><br>
+	    <%= f.text_field :name, class: 'form-control' %>
+	  </div>
+	 <div class="actions">
+	    <%= f.submit 'Add New Store!', class: 'btn btn-warning' %>
+</div>
+
+</div>
+
+<% end %>
