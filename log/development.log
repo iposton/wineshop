@@ -9030,3 +9030,455 @@ Processing by WinesController#show as HTML
   Rendered wines/show.html.erb within layouts/application (2.3ms)
   Rendered shared/_footer.erb (0.0ms)
 Completed 200 OK in 127ms (Views: 122.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-11 17:45:44 -0700
+Processing by WinesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.8870ms
+  MOPED: Retrying connection attempt 1 more time(s). runtime: n/a
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.4680ms
+  Rendered wines/index.html.erb within layouts/application (268.1ms)
+Completed 500 Internal Server Error in 293ms
+
+ActionView::Template::Error (Could not connect to a primary node for replica set #<Moped::Cluster:70301631711540 @seeds=[<Moped::Node resolved_address="127.0.0.1:27017">]>):
+     9: 
+    10: <ol>
+    11: 
+    12: 	<% @wines.each do |wine| %>
+    13: 
+    14: 	<h3><li> <%= wine.name %> | <%= wine.grape %> | <button class="pure-menu pure-button"><%= link_to "More info", wine_path(wine) %></button></li></h3>
+    15: 
+  app/views/wines/index.html.erb:12:in `_app_views_wines_index_html_erb___3305239139408215534_70301598409020'
+
+
+  Rendered /Users/ianposton/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/ianposton/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/ianposton/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-11 17:46:04 -0700
+Processing by WinesController#index as HTML
+  MOPED: Retrying connection attempt 1 more time(s). runtime: n/a
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 9.7710ms
+  MOPED: 127.0.0.1:27017 QUERY        database=wineshop_development collection=wines selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.6620ms
+  Rendered wines/index.html.erb within layouts/application (267.1ms)
+  Rendered shared/_footer.erb (0.5ms)
+Completed 200 OK in 553ms (Views: 551.9ms)
+
+
+Started GET "/assets/wines.css?body=1" for 127.0.0.1 at 2015-03-11 17:46:05 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:05 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-11 17:46:05 -0700
+
+
+Started GET "/assets/pure-min.css?body=1" for 127.0.0.1 at 2015-03-11 17:46:05 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:05 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:05 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:05 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:05 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:05 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:05 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:05 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:05 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:05 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:05 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:05 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:05 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:05 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:05 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:05 -0700
+
+
+Started GET "/assets/wines.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:05 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:05 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:05 -0700
+
+
+Started GET "/wines/new" for 127.0.0.1 at 2015-03-11 17:46:09 -0700
+Processing by WinesController#new as HTML
+  Rendered wines/_form.html.erb (0.3ms)
+  Rendered wines/new.html.erb within layouts/application (2.1ms)
+  Rendered shared/_footer.erb (0.3ms)
+Completed 200 OK in 109ms (Views: 108.0ms)
+
+
+Started GET "/wines/new" for 127.0.0.1 at 2015-03-11 17:46:22 -0700
+Processing by WinesController#new as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3780ms
+  MOPED: 127.0.0.1:27017 QUERY        database=wineshop_development collection=stores selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8520ms
+  Rendered wines/_form.html.erb (40.8ms)
+  Rendered wines/new.html.erb within layouts/application (42.2ms)
+  Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 156ms (Views: 155.2ms)
+
+
+Started GET "/assets/wines.css?body=1" for 127.0.0.1 at 2015-03-11 17:46:22 -0700
+
+
+Started GET "/assets/pure-min.css?body=1" for 127.0.0.1 at 2015-03-11 17:46:22 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:22 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:22 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:22 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-11 17:46:22 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:22 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:22 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:22 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:22 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:22 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:22 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:22 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:22 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:22 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:22 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:22 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:22 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:22 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:22 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:22 -0700
+
+
+Started GET "/assets/wines.js?body=1" for 127.0.0.1 at 2015-03-11 17:46:22 -0700
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-03-11 17:46:26 -0700
+Processing by WinesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3650ms
+  MOPED: 127.0.0.1:27017 QUERY        database=wineshop_development collection=wines selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3950ms
+  Rendered wines/index.html.erb within layouts/application (2.6ms)
+  Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 106ms (Views: 105.7ms)
+
+
+Started GET "/wines/549dfedc49414e0353000000" for 127.0.0.1 at 2015-03-11 17:46:28 -0700
+Processing by WinesController#show as HTML
+  Parameters: {"id"=>"549dfedc49414e0353000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=wineshop_development collection=wines selector={"_id"=>BSON::ObjectId('549dfedc49414e0353000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.3010ms
+  MOPED: 127.0.0.1:27017 QUERY        database=wineshop_development collection=stores selector={"$query"=>{"_id"=>BSON::ObjectId('54a2686a49414e08cf000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 1.3210ms
+  Rendered wines/show.html.erb within layouts/application (4.0ms)
+  Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 114ms (Views: 110.9ms)
+
+
+Started GET "/wines/549dfedc49414e0353000000/edit" for 127.0.0.1 at 2015-03-11 17:46:30 -0700
+Processing by WinesController#edit as HTML
+  Parameters: {"id"=>"549dfedc49414e0353000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=wineshop_development collection=wines selector={"_id"=>BSON::ObjectId('549dfedc49414e0353000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3640ms
+  MOPED: 127.0.0.1:27017 QUERY        database=wineshop_development collection=stores selector={"$query"=>{"_id"=>BSON::ObjectId('54a2686a49414e08cf000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3900ms
+  MOPED: 127.0.0.1:27017 QUERY        database=wineshop_development collection=stores selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3790ms
+  Rendered wines/_form.html.erb (6.0ms)
+  Rendered wines/edit.html.erb within layouts/application (7.2ms)
+  Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 113ms (Views: 111.4ms)
+
+
+Started GET "/wines/549dfedc49414e0353000000/edit" for 127.0.0.1 at 2015-03-11 17:47:35 -0700
+Processing by WinesController#edit as HTML
+  Parameters: {"id"=>"549dfedc49414e0353000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4390ms
+  MOPED: 127.0.0.1:27017 QUERY        database=wineshop_development collection=wines selector={"_id"=>BSON::ObjectId('549dfedc49414e0353000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3230ms
+  MOPED: 127.0.0.1:27017 QUERY        database=wineshop_development collection=stores selector={"$query"=>{"_id"=>BSON::ObjectId('54a2686a49414e08cf000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6610ms
+  MOPED: 127.0.0.1:27017 QUERY        database=wineshop_development collection=stores selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3440ms
+  Rendered wines/_form.html.erb (6.7ms)
+  Rendered wines/edit.html.erb within layouts/application (7.8ms)
+  Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 110ms (Views: 108.0ms)
+
+
+Started GET "/assets/wines.css?body=1" for 127.0.0.1 at 2015-03-11 17:47:36 -0700
+
+
+Started GET "/assets/pure-min.css?body=1" for 127.0.0.1 at 2015-03-11 17:47:36 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-11 17:47:36 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:36 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:36 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:36 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:36 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:36 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:36 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:36 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:36 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:36 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:36 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:36 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:36 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:36 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:36 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:36 -0700
+
+
+Started GET "/assets/wines.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:36 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:36 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:36 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:36 -0700
+
+
+Started GET "/wines/549dfedc49414e0353000000/edit" for 127.0.0.1 at 2015-03-11 17:47:40 -0700
+Processing by WinesController#edit as HTML
+  Parameters: {"id"=>"549dfedc49414e0353000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3710ms
+  MOPED: 127.0.0.1:27017 QUERY        database=wineshop_development collection=wines selector={"_id"=>BSON::ObjectId('549dfedc49414e0353000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3060ms
+  MOPED: 127.0.0.1:27017 QUERY        database=wineshop_development collection=stores selector={"$query"=>{"_id"=>BSON::ObjectId('54a2686a49414e08cf000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3460ms
+  MOPED: 127.0.0.1:27017 QUERY        database=wineshop_development collection=stores selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3000ms
+  Rendered wines/_form.html.erb (4.2ms)
+  Rendered wines/edit.html.erb within layouts/application (4.9ms)
+  Rendered shared/_footer.erb (0.1ms)
+Completed 200 OK in 124ms (Views: 121.8ms)
+
+
+Started GET "/assets/wines.css?body=1" for 127.0.0.1 at 2015-03-11 17:47:40 -0700
+
+
+Started GET "/assets/pure-min.css?body=1" for 127.0.0.1 at 2015-03-11 17:47:40 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-11 17:47:40 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:40 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:40 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:40 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:40 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:40 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:40 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:40 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:40 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:40 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:40 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:40 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:40 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:40 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:40 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:40 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:40 -0700
+
+
+Started GET "/assets/wines.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:40 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:40 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:40 -0700
+
+
+Started GET "/wines/549dfedc49414e0353000000/edit" for 127.0.0.1 at 2015-03-11 17:47:56 -0700
+Processing by WinesController#edit as HTML
+  Parameters: {"id"=>"549dfedc49414e0353000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3550ms
+  MOPED: 127.0.0.1:27017 QUERY        database=wineshop_development collection=wines selector={"_id"=>BSON::ObjectId('549dfedc49414e0353000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3080ms
+  MOPED: 127.0.0.1:27017 QUERY        database=wineshop_development collection=stores selector={"$query"=>{"_id"=>BSON::ObjectId('54a2686a49414e08cf000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3870ms
+  MOPED: 127.0.0.1:27017 QUERY        database=wineshop_development collection=stores selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3250ms
+  Rendered wines/_form.html.erb (5.4ms)
+  Rendered wines/edit.html.erb within layouts/application (6.8ms)
+  Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 128ms (Views: 125.8ms)
+
+
+Started GET "/assets/wines.css?body=1" for 127.0.0.1 at 2015-03-11 17:47:56 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-11 17:47:56 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:56 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:56 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:56 -0700
+
+
+Started GET "/assets/pure-min.css?body=1" for 127.0.0.1 at 2015-03-11 17:47:56 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:56 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:56 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:56 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:56 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:56 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:56 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:56 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:56 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:56 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:56 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:56 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:56 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:56 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:56 -0700
+
+
+Started GET "/assets/wines.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:56 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-11 17:47:56 -0700
