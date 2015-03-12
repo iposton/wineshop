@@ -15,6 +15,8 @@ gem 'autoprefixer-rails'
 # include rails_12factor to allow static assets on heroku
 group :production, :staging do
     gem 'rails_12factor'
+    gem 'thin'
+  	gem 'unicorn', '4.8.3'
  end
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
